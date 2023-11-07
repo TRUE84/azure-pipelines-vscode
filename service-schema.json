@@ -4011,6 +4011,10 @@
         },
         {
           "type": "boolean"
+        },
+        {
+          "type": "object",
+          "additionalProperties": true
         }
       ]
     },
