@@ -6040,6 +6040,14 @@
               "enum": [
                 "DockerInstaller@0"
               ]
+            },
+            {
+              "description": "https://marketplace.visualstudio.com/items?itemName=mabl.mabl-azure-devops-task",
+              "doNotSuggest": false,
+              "ignoreCase": "value",
+              "enum": [
+                "mabl-azure-devops-extension@1"
+              ]
             }
           ]
         },
