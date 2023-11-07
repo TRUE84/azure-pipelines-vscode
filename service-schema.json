@@ -30158,6 +30158,61 @@
           "required": [
             "task"
           ]
+        },
+        {
+          "properties": {
+            "task": {
+              "description": "Azure CLI\n\nRun Azure CLI commands against an Azure subscription in a PowerShell Core/Shell script when running on Linux agent or PowerShell/PowerShell Core/Batch script when running on Windows agent.",
+              "ignoreCase": "value",
+              "pattern": "^mabl-azure-devops-extension@1$"
+            },
+            "inputs": {
+              "description": "Mabl azure-devops extension inputs",
+              "properties": {
+                "apikey": {
+                  "type": "string",
+                  "description": "Mabl Api Key",
+                  "ignoreCase": "key"
+                },
+                "applicationId": {
+                  "description": "Mabl Application ID",
+                  "ignoreCase": "key"
+                },
+                "environmentId": {
+                  "description": "Mabl Environment Name",
+                  "ignoreCase": "key"
+                },
+                "labels": {
+                  "type": "string",
+                  "description": "Mabl Label",
+                  "ignoreCase": "key"
+                },
+                "browserTypes": {
+                  "type": "string",
+                  "description": "Browser Name",
+                  "ignoreCase": "all",
+                  "enum": [
+                      "chrome"
+                  ]
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "apikey",
+                "applicationId",
+                "environmentId",
+                "labels"
+              ]
+            }
+          },
+          "doNotSuggest": false,
+          "firstProperty": [
+            "task"
+          ],
+          "required": [
+            "task",
+            "inputs"
+          ]
         }
       ]
     }
