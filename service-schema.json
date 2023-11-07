@@ -4005,7 +4005,14 @@
       "type": "string"
     },
     "nonEmptyString": {
-      "type": "string"
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
     },
     "sequenceOfNonEmptyString": {
       "type": "array",
