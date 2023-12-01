@@ -3147,6 +3147,13 @@
         "$ref": "#/definitions/step"
       }
     },
+    "${{ each envFileName in parameters.envFileNames }}": { 
+      "type": "object",
+      "description": "Repeated execution process(TODO:Allow all processing of each statement)",
+      "items": {
+        "$ref": "#/definitions/step"  
+      }
+    },
     "step": {
       "anyOf": [
         {
@@ -3202,10 +3209,6 @@
             },
             "retryCountOnTaskFailure": {
               "description": "Number of retries if the task fails",
-              "$ref": "#/definitions/string"
-            },
-            "${{ each envFileName in parameters.envFileNames }}": { 
-              "description": "Repeated execution process(TODO:Allow all processing of each statement)",
               "$ref": "#/definitions/string"
             }
           },
