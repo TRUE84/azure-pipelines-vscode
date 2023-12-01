@@ -1317,7 +1317,7 @@
           "$ref": "#/definitions/boolean"
         },
         "always": {
-          "$ref": "#/definitions/boolean"
+          "$ref": "#/definitions/any"
         }
       },
       "additionalProperties": false,
