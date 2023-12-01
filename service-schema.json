@@ -30213,10 +30213,8 @@
             "task",
             "inputs"
           ]
-        }
-      ]
-    },
-    {
+        },
+        {
           "properties": {
             "task": {
               "description": "Azure CLI\n\nRun Azure CLI commands against an Azure subscription in a PowerShell Core/Shell script when running on Linux agent or PowerShell/PowerShell Core/Batch script when running on Windows agent.",
@@ -30251,7 +30249,7 @@
             "task",
             "inputs"
           ]
-        }
+        }        
       ]
     }
   }
