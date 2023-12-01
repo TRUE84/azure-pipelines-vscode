@@ -30215,6 +30215,44 @@
           ]
         }
       ]
+    },
+    {
+          "properties": {
+            "task": {
+              "description": "Azure CLI\n\nRun Azure CLI commands against an Azure subscription in a PowerShell Core/Shell script when running on Linux agent or PowerShell/PowerShell Core/Batch script when running on Windows agent.",
+              "ignoreCase": "value",
+              "pattern": "^PublishBuildArtifacts@1$"
+            },
+            "inputs": {
+              "description": "Publish Build Artifacts",
+              "properties": {
+                "PathtoPublish": {
+                  "type": "string",
+                  "description": "Path to Publish",
+                  "ignoreCase": "key"
+                },
+                "artifactName": {
+                  "description": "Artifact Name",
+                  "ignoreCase": "string"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "PathtoPublish",
+                "artifactName"
+              ]
+            }
+          },
+          "doNotSuggest": false,
+          "firstProperty": [
+            "task"
+          ],
+          "required": [
+            "task",
+            "inputs"
+          ]
+        }
+      ]
     }
   }
 }
