@@ -3156,6 +3156,22 @@
         {
           "type": "object",
           "properties": {
+            "${{ each envFileName in parameters.envFileNames }}": {
+              "description": "loop processing",
+              "$ref": "#/definitions/string"
+            }
+          },
+          "additionalProperties": false,
+          "firstProperty": [
+            "${{ each envFileName in parameters.envFileNames }}"
+          ],
+          "required": [
+            "${{ each envFileName in parameters.envFileNames }}"
+          ]
+        },        
+        {
+          "type": "object",
+          "properties": {
             "script": {
               "description": "An inline script",
               "$ref": "#/definitions/string"
