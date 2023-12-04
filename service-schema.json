@@ -3156,14 +3156,17 @@
         {
           "type": "object",
           "properties": {
-            "${{ each envFileName in parameters.envFileNames }}": {
+            "${{ each envFileName in parameters.envFileNames }}:": {
               "description": "loop processing",
-              "$ref": "#/definitions/steps"
+              "$ref": "#/definitions/step"
             }
           },
           "additionalProperties": false,
           "firstProperty": [
-            "${{ each envFileName in parameters.envFileNames }}"
+            "${{ each envFileName in parameters.envFileNames }}:"
+          ],
+          "required": [
+            "${{ each envFileName in parameters.envFileNames }}:"
           ]
         },       
         {
