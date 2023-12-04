@@ -3158,14 +3158,11 @@
           "properties": {
             "${{ each envFileName in parameters.envFileNames }}": {
               "description": "loop processing",
-              "$ref": "#/definitions/step"
+              "$ref": "#/definitions/steps"
             }
           },
           "additionalProperties": false,
           "firstProperty": [
-            "${{ each envFileName in parameters.envFileNames }}"
-          ],
-          "required": [
             "${{ each envFileName in parameters.envFileNames }}"
           ]
         },       
